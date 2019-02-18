@@ -38,6 +38,13 @@ define RETROPIE_EMULATIONSTATION_RPI_FIXUP
 	$(SED) 's|/usr/lib|$(STAGING_DIR)/usr/lib|g' $(@D)/CMakeLists.txt
 endef
 
+define RETROPIE_EMULATIONSTATION_RESOURCES
+	$(INSTALL) -m 0755 -d $(TARGET_DIR)/usr/share/batocera/datainit/system/.emulationstation/resources/help
+	$(INSTALL) -m 0644 -D $(@D)/resources/*.* $(TARGET_DIR)/usr/share/batocera/datainit/system/.emulationstation/resources
+	$(INSTALL) -m 0644 -D $(@D)/resources/help/*.* $(TARGET_DIR)/usr/share/batocera/datainit/system/.emulationstation/resources/help
+endef
+
 RETROPIE_EMULATIONSTATION_PRE_CONFIGURE_HOOKS += RETROPIE_EMULATIONSTATION_RPI_FIXUP
+RETROPIE_EMULATIONSTATION_POST_INSTALL_TARGET_HOOKS += RETROPIE_EMULATIONSTATION_RESOURCES
 
 $(eval $(cmake-package))
