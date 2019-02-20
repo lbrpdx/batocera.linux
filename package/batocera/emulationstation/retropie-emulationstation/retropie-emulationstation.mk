@@ -10,7 +10,7 @@ RETROPIE_EMULATIONSTATION_SITE = https://github.com/RetroPie/EmulationStation
 RETROPIE_EMULATIONSTATION_SITE_METHOD = git
 RETROPIE_EMULATIONSTATION_GIT_SUBMODULES = YES
 RETROPIE_EMULATIONSTATION_LICENSE = MIT, Apache-2.0
-RETROPIE_EMULATIONSTATION_DEPENDENCIES = sdl2 sdl2_mixer boost libfreeimage freetype eigen alsa-lib \
+RETROPIE_EMULATIONSTATION_DEPENDENCIES = sdl2 sdl2_mixer libfreeimage freetype alsa-lib \
 	libcurl openssl vlc rapidjson
 
 # ifeq ($(BR2_PACKAGE_KODI),y)
