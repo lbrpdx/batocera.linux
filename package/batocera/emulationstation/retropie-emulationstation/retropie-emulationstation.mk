@@ -4,9 +4,9 @@
 #
 ################################################################################
 
-# Version: 2.8.1
-RETROPIE_EMULATIONSTATION_VERSION = stable
-RETROPIE_EMULATIONSTATION_SITE = https://github.com/RetroPie/EmulationStation
+# Version: 2.8.3
+RETROPIE_EMULATIONSTATION_VERSION = 3a9297abbb84429138be4b4ee0f1e4c1d7726475
+RETROPIE_EMULATIONSTATION_SITE = https://github.com/batocera-linux/EmulationStation
 RETROPIE_EMULATIONSTATION_SITE_METHOD = git
 RETROPIE_EMULATIONSTATION_GIT_SUBMODULES = YES
 RETROPIE_EMULATIONSTATION_LICENSE = MIT, Apache-2.0
