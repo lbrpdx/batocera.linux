@@ -29,3 +29,8 @@ index 607a934..57cf5f6 100644
  	}
  
  	wxDirName GetMemoryCards()
+	{
+-		return GetDocuments() + Base::MemoryCards();
++	 //return GetDocuments() + Base::MemoryCards();
++	 return wxDirName("/userdata/saves/ps2/memorycard");
+	}
