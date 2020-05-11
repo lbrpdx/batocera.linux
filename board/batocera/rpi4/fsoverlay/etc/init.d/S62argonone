@@ -14,7 +14,7 @@ case "$1" in
     fi
   ;;
   stop)
-    pid=$(ps auxw | grep batocera-argonone | grep -v grep | head -n 1 | awk '{print $1}')
+    pid=$(pgrep -f batocera-argonone)
     if [ -z "${pid}" ]; then
         kill -9 "${pid}"
     fi
@@ -30,7 +30,7 @@ case "$1" in
     fi
     ;;
   reload|restart)
-    pid=$(ps auxw | grep batocera-argonone | grep -v grep | head -n 1 | awk '{print $1}')
+    pid=$(pgrep -f batocera-argonone)
     if [ -z "${pid}" ]; then
         kill -9 "${pid}"
     fi
