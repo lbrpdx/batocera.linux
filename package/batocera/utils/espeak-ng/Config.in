@@ -1,0 +1,8 @@
+config BR2_PACKAGE_ESPEAK_NG
+    bool "espeak-ng"
+    depends on BR2_INSTALL_LIBSTDCPP
+    help
+      eSpeak-ng is a more modern text-to-speech synthesizer for English
+      and other languages, forked from the espeak project.
+      
+      https://github.com/espeak-ng/espeak-ng
