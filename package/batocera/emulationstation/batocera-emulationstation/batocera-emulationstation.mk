@@ -4,8 +4,8 @@
 #
 ################################################################################
 # Last update: Commits on June 21, 2026
-BATOCERA_EMULATIONSTATION_VERSION = 7351f65717caf046cebcb4b14c48c166e15a6edf
-BATOCERA_EMULATIONSTATION_SITE = https://github.com/batocera-linux/batocera-emulationstation
+BATOCERA_EMULATIONSTATION_VERSION = ade74aa49e69c31ef69d211925eaa65430293a51
+BATOCERA_EMULATIONSTATION_SITE = https://github.com/lbrpdx/batocera-emulationstation
 BATOCERA_EMULATIONSTATION_SITE_METHOD = git
 BATOCERA_EMULATIONSTATION_LICENSE = MIT
 BATOCERA_EMULATIONSTATION_GIT_SUBMODULES = YES
@@ -132,6 +132,10 @@ define BATOCERA_EMULATIONSTATION_RESOURCES
 	    $(TARGET_DIR)/usr/share/emulationstation/resources/shaders
 	$(INSTALL) -m 0644 -D $(@D)/resources/shaders/*.* \
 	    $(TARGET_DIR)/usr/share/emulationstation/resources/shaders/kawase
+
+	# ID3v2 lib
+	mkdir -p $(TARGET_DIR)/usr/lib
+	$(INSTALL) -m 0644 $(@D)/libid3v2lib.so $(TARGET_DIR)/usr/lib
 
 	# es_input.cfg
 	mkdir -p $(TARGET_DIR)/usr/share/batocera/datainit/system/configs/emulationstation
